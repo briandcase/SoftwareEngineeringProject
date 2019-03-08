@@ -18,7 +18,14 @@ The presentation: 30% of the final grade of your project.
 During the presentation, each teams needs to demonstrate basic operations of LMS system like adding, deleting, inserting, and modifying a record (record could be a course and a student profile), logging in/out system, browsing all records, checking a student or all students’ GPA, GitHub demonstration, and so forth.
 
 ## Submit all artifacts you used in the project. 
-These artifacts include source code, UML diagrams, SPMP, version control documentation, test cases, data storage files, and other necessary artifacts we studied in the class. For example, if you have used design pattern for software reuse, design pattern document should be uploaded. All artifacts should have two copies, one copy will be uploaded on Blackboard and the second copy exists in GitHub of your team project. The GitHub account is set to be visible for all users so that your GitHub can be accessed for review.
+- [] source code
+- [] UML diagrams
+- [] SPMP
+- [] version control documentation
+- [] test cases
+- [] data storage files
+- [] and other necessary artifacts we studied in the class. 
+*For example, if you have used design pattern for software reuse, design pattern document should be uploaded. All artifacts should have two copies, one copy will be uploaded on Blackboard and the second copy exists in GitHub of your team project. The GitHub account is set to be visible for all users so that your GitHub can be accessed for review.*
 
 ## Project Peer Assessment
 For each project team in the class, evaluate your team members with a grade 1-10 for the performance in the project. 1 represents worst performance and 10 represents best performance during one-semester project.
