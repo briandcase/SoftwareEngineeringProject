@@ -21,10 +21,11 @@ During the presentation, each teams needs to demonstrate basic operations of LMS
 - [] source code
 - [] UML diagrams
 - [] SPMP
-- [] version control documentation
+- [x] version control documentation
 - [] test cases
 - [] data storage files
 - [] and other necessary artifacts we studied in the class. 
+
 *For example, if you have used design pattern for software reuse, design pattern document should be uploaded. All artifacts should have two copies, one copy will be uploaded on Blackboard and the second copy exists in GitHub of your team project. The GitHub account is set to be visible for all users so that your GitHub can be accessed for review.*
 
 ## Project Peer Assessment
