@@ -18,7 +18,7 @@ if (!$_ADMIN && basename($_SERVER["SCRIPT_FILENAME"], '.php')!="login") {
   <body>
     <!-- [NOW LOADING SPINNER] -->
     <div id="page-loader">
-      <img id="page-loader-spin" src="public/cube-loader.svg">
+      <img id="page-loader-spin" src="public/rings.svg">
     </div>
 
     <!-- [PAGE WRAPPER] -->
