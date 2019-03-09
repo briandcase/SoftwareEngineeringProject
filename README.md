@@ -2,6 +2,8 @@
 ## **Due on 4/28/2019 by 12 a.m.** 
 :sweat::sweat:
 
+[![Build Status](https://travis-ci.com/briandcase/SoftwareEngineeringProject.svg?branch=master)](https://travis-ci.com/briandcase/SoftwareEngineeringProject)
+
 ## Project Report and Items
 The final grade of the project will be evaluated comprehensively based on the completeness of the all submitted items. During and after the project, the following items are expected to be submitted.
 
