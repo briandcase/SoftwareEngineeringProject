@@ -12,21 +12,41 @@
 <body>
     <p>&nbsp;</p>
     <div class="container">
+    <table class="table table-hover"> 
+            <tr>
+                <th>Student Name</th>
+                <th>GPA</th>
+                <th>Classes</th>
+                <tr>
+            </tr>
+            <tbody>
+            <?php
+            $json = file_get_contents ('data/student_info.txt');
+                $iter = new RecursiveIteratorIterator( new RecursiveArrayIterator(json_decode($json, true)), RecursiveIteratorIterator::SELF_FIRST);
+                $studentNames = 'Student Name';
+                $gpas = 'GPA';
+                
+                foreach($iter as $key=>$value)
+                {
+                    if($studentNames==$key && $value!=='')
+                    {
+                        $nameresults[] = $value;
+                    }
+                    else if($gpas==$key && $value!=='')
+                    {
+                        $gparesults[] = $value;
+                    }
+                }
 
-    <!-- table -->
-    <table class='table' data-toggle="table" data-url="student_info.txt">
-        <thead>
-            <TR>
-                <TH data-field="Student Name" data-align="center" data-sortable="true">Student Name</TH>
-                <TH data-field="GPA" data-align="center" data-sortable="true">GPA</TH>
-                <TH data-field="Classes" data-align="center" data-sortable="true">Classes</TH>
-            </TR>
-        </thead>
-    </table>
+                echo "$nameresults[0]";
+                echo "$gparesults[0]";
+                ?>
+            </tbody>
+        </table>
 
     </div>
 <!-- Latest compiled and minified JavaScript -->
-<script src="public/js/jquery-1.11.1.min.js"></script>
+<script src="public/js/jquery-3.3.1.min.js"></script>
 <script src="public/js/bootstrap.min.js"></script>
 </body>
 
