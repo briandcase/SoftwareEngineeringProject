@@ -21,7 +21,7 @@
             </tr>
             <tbody>
             <?php
-            $json = file_get_contents ('data/student_info.txt');
+            $json = file_get_contents ('data/student_info.json');
                 $iter = new RecursiveIteratorIterator( new RecursiveArrayIterator(json_decode($json, true)), RecursiveIteratorIterator::SELF_FIRST);
                 $studentNames = 'Student Name';
                 $gpas = 'GPA';

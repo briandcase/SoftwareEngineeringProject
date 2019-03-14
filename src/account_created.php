@@ -8,7 +8,7 @@
 $filename = 'data/login_info.txt';
 
 $login_json = json_decode(file_get_contents($filename), true);
-$stud_json = json_decode(file_get_contents('data/student_info.txt'), true);
+$stud_json = json_decode(file_get_contents('data/student_info.json'), true);
 
 
 if (isset($stud_json[$_POST['id']])) {
