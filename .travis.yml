@@ -27,3 +27,10 @@ matrix:
 notifications:
     on_success: never
     on_failure: always
+    
+deploy:
+  provider: heroku
+  app: uhd-student-portal
+  api_key:
+    secure: "7ca84e60-e3d7-4f84-9e7a-3d213833138d"
+ 
