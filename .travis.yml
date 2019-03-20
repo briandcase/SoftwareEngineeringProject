@@ -1,38 +1,22 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-
-# list any PHP version you want to test against
 php:
-  # using major version aliases
-  - 7.2
-  - 7.3
-
+- 7.2
+- 7.3
 branches:
-  only:
-    master
-
-# Commands to be run before your environment runs.
+  only: master
 before_script:
-  - composer self-update
-  - composer install --prefer-source --no-interaction --dev  
-
+- composer self-update
+- composer install --prefer-source --no-interaction --dev
 script: phpunit --exclude-group FITS --bootstrap vendor/autoload.php tests
-
-# allow_failures: Allow this build to fail under the specified environments.
-# fast_finish: If your build fails do not continue trying to build, just stop.
 matrix:
   fast_finish: true
-
-# Customize when the notification emails are sent.
 notifications:
-    on_success: never
-    on_failure: always
-    
+  on_success: never
+  on_failure: always
 deploy:
   provider: heroku
   app: uhd-student-portal
   api_key:
-    secure: KEY
+    secure: tQXIvyZhrAUwYjzDGn5cNfBAuAxBo0+XPiwUGvR1+2OsjP4k2en/ISaJBiXWWnkBSypPgXJKQa3lfjNln3bIY4+LyK1tRI1QUkSNcEOoaPU/YF3jCmrY01nWV6LRFCSZ9KnO1LUnDJaz8RuOqoTsXj5oSCJqqnwcFh6Iy7kTLB3A0JvL04twixvkw6vuGvYkqdW3e3m+NrzVefO+1K4pRrdM1A7qbfso0cvNplEamdPFRJ4foVhtjFt/Nax/TzHGgRcRibBDvLxcODJAQsgVhvq7tjkJ1o2AlMtW3VVfodigG16T1FMP+gi1ns2TaroUyjDI4GRarzigC2NaQjc/4s4gOx+nFGZK/e28t8joOP6zGcDtA93gM0dmvOKIHM+f2tqdBrS1qW8SdK/sMst2p8Y725UDjQKm2boFKuT+E/Gf972eURX6iWfLUnLRXuSAiET9OlvKVoyUqQDM2vmjCEPxppLgtuGxbbHu8LW2X9zs+CS5bTzU0Qd6ISUeux2yj83enkil405IFPUDUtBpmAEMtY39sya7ikbEOII3zkZieDkKTgB8S+rcZsHINzPRVvcGLTc3tSqrEpLgMi+wL0mICgQu1adk2w7p3G4OTeS3b0u3fvENk5XpuHnjwixtll5FeJxUoyzLHtLo1N0QzFiJKBZ4NfMKHDpPhv9a46w=
   on:
     repo: briandcase/SoftwareEngineeringProject
- 
