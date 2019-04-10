@@ -2,37 +2,29 @@
 
   <head>
     <title>Student Database</title>
+    <link rel="stylesheet" href="../public/css/login.css">
   </head>
 
   <body>
 
-    <h1 align="center">School Database Login</h1>
+    <h1 class="site-title">School Database Login</h1>
+    <form action="login.php" method="post">
+    <!form action="student_info_processing.php" method="post">
+        <div class="form-group">
+          <label for="schoolIDInput">School ID</label>
+          <input type="text" class="form-control" name="id" size="30" placeholder="Enter ID number here" required/>
+        </div>
 
-    <div align="center">
-      <form action="login.php" method="post">
-      <!form action="student_info_processing.php" method="post">
+        <div>
+          <label for="passwordInput">Password</label>
+          <input type="password" class="form-control" name="password" size="30" placeholder="Enter password here" required/>
+        </div>
 
-        <table border="0">
+        <button class="btn btn-primary btn-large">SUBMIT</button>
+    </form>
+   
 
-          <tr>
-            <td><b>School ID</b></td>
-            <td><input type="text" name="id" size="30" required/></td>
-          </tr>
-
-          <tr>
-            <td><b>Password</b></td>
-            <td><input type="password" name="password" size="30" /></td>
-          </tr>
-
-          <tr>  
-            <td colspan="2" align="center"><input type="submit" value="Login" /></td>
-          </tr>
-
-        </table>
-      </form>
-    </div>
-
-    <div align="center">
+    <div class="createAccountButton">
       <a href="new_account.html">Create account</a>
     </div>
 
