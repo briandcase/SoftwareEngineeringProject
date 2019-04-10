@@ -7,30 +7,25 @@
 
   <body>
 
-    <h1 align="center">Enter your new account info</h1>
+    <h1 class="site-title">Enter your new account info</h1>
 
-    <div align="center">
+    
       <form action="account_created.php" method="post">
+        <div class="form-group">
+          <label for="schoolIDInput">User School ID</label>
+          <input type="text" class="form-control" name="id" size="30" placeholder="Enter ID number here" required/>
+        </div>
 
-        <table border="0">
+        <div>
+          <label for="passwordInput">Create password</label>
+          <input type="password" class="form-control" name="password" size="30" placeholder="Enter new account password here" required/>
+        </div>
 
-          <tr><td>Your school ID</td></tr>
-          <tr>
-            <td><input type="text" name="id" size="30" required/></td>
-          </tr>
+        <button class="btn btn-primary btn-large">Create New Account</button>
 
-          <tr><td>Create your new password</td></tr>
-          <tr>
-            <td><input type="password" name="password" size="30" required/></td>
-          </tr>
-
-          <tr>  
-            <td colspan="2" align="center"><input type="submit" value="Create" /></td>
-          </tr>
-
-        </table>
+      
       </form>
-    </div>
+  
 
   </body>
 
