@@ -1,0 +1,23 @@
+@import url("bootstrap.min.css");
+
+.site-title {
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+
+form {
+   margin: 125 auto 0;
+   width: 30%;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+button {
+    margin-top: 25px;
+}
+
+.createAccountButton {
+    text-align: center;
+}
