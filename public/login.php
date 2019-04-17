@@ -44,6 +44,8 @@ exit;
 }
 ?>
 <body class="text-center">
+	<div class="container">
+ 	<div class="row">
 	<form action="" method="post" name="Login_Form">
 	<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <table class="table table-borderless">
@@ -69,6 +71,12 @@ exit;
     </tr>
   </table>
 </form>
+</div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
 
 
 </html>

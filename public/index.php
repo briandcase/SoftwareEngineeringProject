@@ -22,7 +22,10 @@ session_start(); /* Starts the session */
     }
     ?>
 
-
+<div class="container">
+  <div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
 <a href="add.php">Add</a>
 <table class="table">
 	<thead>
@@ -49,8 +52,9 @@ session_start(); /* Starts the session */
 						<td>".$row->id."</td>
 						<td>".$row->firstname."</td>
 						<td>".$row->lastname."</td>
-						<td>".$row->address."</td>
-						<td>".$row->gender."</td>
+						<td>".$row->examScore."</td>
+						<td>".$row->courses."</td>
+                        <td>".$row->gpa."</td>
 						<td><a href='edit.php?index=".$index."'>Edit</a></td>
 						<td><a href='delete.php?index=".$index."'>Delete</a></td>
 					</tr>
@@ -61,8 +65,10 @@ session_start(); /* Starts the session */
 		?>
 	</tbody>
 </table>
-
-
+<div class="col-2"></div>
+</div>
+</div>
+</div>
 <a href="logout.php">Click here</a> to Logout.
 	</div>
 	<!-- Latest compiled and minified JavaScript -->

@@ -22,12 +22,16 @@
     		<input type="text" id="lastname" name="lastname">
     	</p>
     	<p>
-    		<label for="address">Address</label>
-    		<input type="text" id="address" name="address">
+    		<label for="examScore">examScore</label>
+    		<input type="text" id="examScore" name="examScore">
     	</p>
     	<p>
-    		<label for="gender">Gender</label>
-    		<input type="text" id="gender" name="gender">
+    		<label for="courses">courses</label>
+    		<input type="text" id="courses" name="courses">
+    	</p>
+    	<p>
+    		<label for="gpa">gpa</label>
+    		<input type="text" id="gpa" name="gpa">
     	</p>
     	<input type="submit" name="save" value="Save">
     </form>
@@ -43,8 +47,9 @@
     			'id' => $_POST['id'],
     			'firstname' => $_POST['firstname'],
     			'lastname' => $_POST['lastname'],
-    			'address' => $_POST['address'],
-    			'gender' => $_POST['gender']
+    			'examScore' => $_POST['examScore'],
+    			'courses' => $_POST['courses'],
+    			'gpa' => $_POST['gpa']
     		);
      
     		//append the input to our array

@@ -35,12 +35,16 @@
 				id="lastname" name="lastname" value="<?php echo $row->lastname; ?>">
 		</p>
 		<p>
-			<label for="address">Address</label> <input type="text" id="address"
-				name="address" value="<?php echo $row->address; ?>">
+			<label for="examScore">examScore</label> <input type="text" id="examScore"
+				name="examScore" value="<?php echo $row->examScore; ?>">
 		</p>
 		<p>
-			<label for="gender">Gender</label> <input type="text" id="gender"
-				name="gender" value="<?php echo $row->gender; ?>">
+			<label for="courses">courses</label> <input type="text" id="courses"
+				name="courses" value="<?php echo $row->courses; ?>">
+		</p>
+		<p>
+			<label for="gpa">gpa</label> <input type="text" id="gpa"
+				name="gpa" value="<?php echo $row->gpa; ?>">
 		</p>
 		<input type="submit" name="save" value="Save">
 	</form>
@@ -52,8 +56,9 @@
             'id' => $_POST['id'],
             'firstname' => $_POST['firstname'],
             'lastname' => $_POST['lastname'],
-            'address' => $_POST['address'],
-            'gender' => $_POST['gender']
+            'examScore' => $_POST['examScore'],
+            'courses' => $_POST['courses'],
+            'gpa' => $_POST['gpa'],
         );
 
         // update the selected index
