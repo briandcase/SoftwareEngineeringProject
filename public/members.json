@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "firstname": "neovic",
+        "lastname": "devierte",
+        "address": "silay city",
+        "gender": "Male"
+    },
+    {
+        "id": "2",
+        "firstname": "gemalyn",
+        "lastname": "cepe",
+        "address": "carmen, bohol",
+        "gender": "Female"
+    },
+    {
+        "id": "3",
+        "firstname": "lee",
+        "lastname": "apilinga",
+        "address": "bacolod",
+        "gender": "Female"
+    },
+    {
+        "id": "4",
+        "firstname": "julyn",
+        "lastname": "divinagracia",
+        "address": "eb magalona",
+        "gender": "Female"
+    },
+    {
+        "id": "5",
+        "firstname": "cristine",
+        "lastname": "demapanag",
+        "address": "talisay",
+        "gender": "Female"
+    },
+    {
+        "id": "6",
+        "firstname": "tintin",
+        "lastname": "devierte",
+        "address": "silay city",
+        "gender": "Female"
+    }
+]
