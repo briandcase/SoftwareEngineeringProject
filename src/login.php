@@ -7,8 +7,8 @@
     <title>Login</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/signin.css" rel="stylesheet">
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="public/css/signin.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -46,8 +46,9 @@ exit;
 <body class="text-center">
 	<div class="container">
  	<div class="row">
+ 	<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 	<form action="" method="post" name="Login_Form">
-	<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+	
     <table class="table table-borderless">
     <?php if(isset($msg)){?>
     <tr>
@@ -74,8 +75,8 @@ exit;
 </div>
 </div>
 <!-- Latest compiled and minified JavaScript -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="public/js/jquery-3.3.1.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
 </body>
 
 
