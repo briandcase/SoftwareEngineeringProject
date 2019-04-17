@@ -3,42 +3,48 @@
         "id": "1",
         "firstname": "neovic",
         "lastname": "devierte",
-        "address": "silay city",
-        "gender": "Male"
+        "examScore": "80",
+        "courses": "Computer Science",
+        "gpa": "3.5"
     },
     {
         "id": "2",
         "firstname": "gemalyn",
         "lastname": "cepe",
-        "address": "carmen, bohol",
-        "gender": "Female"
+        "examScore": "90",
+        "courses": "Mathematics",
+        "gpa": "3.9"
     },
     {
         "id": "3",
         "firstname": "lee",
         "lastname": "apilinga",
-        "address": "bacolod",
-        "gender": "Female"
+        "examScore": "78",
+        "courses": "Biology",
+        "gpa": "3.5"
     },
     {
         "id": "4",
         "firstname": "julyn",
         "lastname": "divinagracia",
-        "address": "eb magalona",
-        "gender": "Female"
+        "examScore": "90",
+        "courses": "Chemistry",
+        "gpa": "3.2"
     },
     {
         "id": "5",
         "firstname": "cristine",
         "lastname": "demapanag",
-        "address": "talisay",
-        "gender": "Female"
+        "examScore": "98",
+        "courses": "History",
+        "gpa": "3.0"
     },
     {
         "id": "6",
         "firstname": "tintin",
         "lastname": "devierte",
-        "address": "silay city",
-        "gender": "Female"
+        "examScore": "71",
+        "courses": "Physics",
+        "gpa": "3.4"
     }
 ]

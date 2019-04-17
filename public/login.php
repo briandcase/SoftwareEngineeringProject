@@ -1,7 +1,31 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
     <title>Login</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/signin.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 </head>
 <?php session_start(); /* Starts the session */
 /* Check Login form submitted */if(isset($_POST['Submit'])){
@@ -19,9 +43,10 @@ exit;
 }
 }
 ?>
-<div align="center">
+<body class="text-center">
 	<form action="" method="post" name="Login_Form">
-  <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
+	<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <table class="table table-borderless">
     <?php if(isset($msg)){?>
     <tr>
       <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
@@ -40,10 +65,10 @@ exit;
     </tr>
     <tr>
       <td> </td>
-      <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+      <td><input name="Submit" type="submit" value="Login" class="btn btn-lg btn-primary btn-block"></td>
     </tr>
   </table>
 </form>
-</div>
+
 
 </html>

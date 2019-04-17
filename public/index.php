@@ -3,6 +3,7 @@
 
 <!-- Bootstrap - Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,14 +24,16 @@ session_start(); /* Starts the session */
 
 
 <a href="add.php">Add</a>
-<table border="1">
+<table class="table">
 	<thead>
-		<th>ID</th>
-		<th>Firstname</th>
-		<th>Lastname</th>
-		<th>Address</th>
-		<th>Gender</th>
-		<th>Action</th>
+	  <tr>
+		<th scope="col">ID</th>
+		<th scope="col">Firstname</th>
+		<th scope="col">Lastname</th>
+		<th scope="col">examScore</th>
+		<th scope="col">courses</th>
+		<th scope="col">gpa</th>
+	  </tr>
 	</thead>
 	<tbody>
 		<?php
@@ -48,10 +51,8 @@ session_start(); /* Starts the session */
 						<td>".$row->lastname."</td>
 						<td>".$row->address."</td>
 						<td>".$row->gender."</td>
-						<td>
-							<a href='edit.php?index=".$index."'>Edit</a>
-							<a href='delete.php?index=".$index."'>Delete</a>
-						</td>
+						<td><a href='edit.php?index=".$index."'>Edit</a></td>
+						<td><a href='delete.php?index=".$index."'>Delete</a></td>
 					</tr>
 				";
  
