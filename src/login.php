@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <title>Login</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
-	<!-- Bootstrap core CSS -->
-	<link href="public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="public/css/signin.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/signin.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -27,28 +27,59 @@
       }
     </style>
 </head>
-<?php session_start(); /* Starts the session */
-/* Check Login form submitted */if(isset($_POST['Submit'])){
-/* Define username and associated password array */$logins = array('Alex' => '123456','username1' => 'password1','username2' => 'password2');
+<?php
 
-/* Check and assign submitted Username and Password to new variable */$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
-$Password = isset($_POST['Password']) ? $_POST['Password'] : '';
+/* Starts the session */
+session_start();
 
-/* Check Username and Password existence in defined array */if (isset($logins[$Username]) && $logins[$Username] == $Password){
-/* Success: Set session variables and redirect to Protected page  */$_SESSION['UserData']['Username']=$logins[$Username];
-header("location:index.php");
-exit;
-} else {
-/*Unsuccessful attempt: Set error message */$msg="<span style='color:red'>Invalid Login Details</span>";
-}
+/* Check Login form submitted */
+if(isset($_POST['Submit'])){
+
+    /* Define username and associated password array */
+    $admins = array('Alex' => '123456');
+
+    /* Check and assign submitted Username and Password to new variable */
+    $Username = isset($_POST['Username']) ? $_POST['Username'] : '';
+    $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
+
+    /* Check Username and Password existence in defined array */
+
+    if($Username != '' && $Password != ''){
+
+        $data = json_decode(file_get_contents('members.json'), true);
+
+        /* Admin Login */
+        if (isset($admins[$Username]) && $admins[$Username] == $Password){
+
+            /* Success: Set session variables and redirect to Protected page  */
+            $_SESSION['UserData']['Username']=$Username;
+            $_SESSION['UserData']['admin'] = true;
+            header("location:index.php");
+            exit;
+        }
+
+        /* Checks if user is a student by checking the student database */
+        foreach($data as $row){
+            if($row['id'] == $Username && $row['password'] == $Password){
+                $_SESSION['UserData']['Username']=$Username;
+                $_SESSION['UserData']['admin'] = false;
+                header("location:student.php");
+                exit;
+            }
+        }
+    }
+
+    /*Unsuccessful attempt: Set error message */
+    $msg="<span style='color:red'>Invalid Login Details</span>";
+
 }
 ?>
 <body class="text-center">
-	<div class="container">
- 	<div class="row">
- 	<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-	<form action="" method="post" name="Login_Form">
-	
+    <div class="container">
+    <div class="row">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <form action="" method="post" name="Login_Form">
+
     <table class="table table-borderless">
     <?php if(isset($msg)){?>
     <tr>
@@ -75,8 +106,8 @@ exit;
 </div>
 </div>
 <!-- Latest compiled and minified JavaScript -->
-	<script src="public/js/jquery-3.3.1.min.js"></script>
-	<script src="public/js/bootstrap.min.js"></script>
+    <script src="public/js/jquery-3.3.1.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
 </body>
 
 
