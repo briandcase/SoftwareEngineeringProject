@@ -19,36 +19,40 @@
 <title>CRUD Operation on JSON File using PHP</title>
 </head>
 <body>
-	<form method="POST">
-		<a href="index.php">Back</a>
-		<p>
-			<label for="id">ID</label> <input type="text" id="id" name="id"
-				value="<?php echo $row->id; ?>">
-		</p>
-		<p>
-			<label for="firstname">Firstname</label> <input type="text"
-				id="firstname" name="firstname"
-				value="<?php echo $row->firstname; ?>">
-		</p>
-		<p>
-			<label for="lastname">Lastname</label> <input type="text"
-				id="lastname" name="lastname" value="<?php echo $row->lastname; ?>">
-		</p>
-		<p>
-			<label for="examScore">examScore</label> <input type="text" id="examScore"
-				name="examScore" value="<?php echo $row->examScore; ?>">
-		</p>
-		<p>
-			<label for="courses">courses</label> <input type="text" id="courses"
-				name="courses" value="<?php echo $row->courses; ?>">
-		</p>
-		<p>
-			<label for="gpa">gpa</label> <input type="text" id="gpa"
-				name="gpa" value="<?php echo $row->gpa; ?>">
-		</p>
-		<input type="submit" name="save" value="Save">
-	</form>
-     
+    <form method="POST">
+        <a href="index.php">Back</a>
+        <p>
+            <label for="id">ID</label> <input type="text" id="id" name="id"
+                value="<?php echo $row->id; ?>">
+        </p>
+        <p>
+            <label for="firstname">Firstname</label> <input type="text"
+                id="firstname" name="firstname"
+                value="<?php echo $row->firstname; ?>">
+        </p>
+        <p>
+            <label for="lastname">Lastname</label> <input type="text"
+                id="lastname" name="lastname" value="<?php echo $row->lastname; ?>">
+        </p>
+        <p>
+            <label for="examScore">examScore</label> <input type="text" id="examScore"
+                name="examScore" value="<?php echo $row->examScore; ?>">
+        </p>
+        <p>
+            <label for="courses">courses</label> <input type="text" id="courses"
+                name="courses" value="<?php echo $row->courses; ?>">
+        </p>
+        <p>
+            <label for="gpa">gpa</label> <input type="text" id="gpa"
+                name="gpa" value="<?php echo $row->gpa; ?>">
+        </p>
+        <p>
+            <label for="password">password</label> <input type="text" id="password"
+                name="password" value="<?php echo $row->password; ?>">
+        </p>
+        <input type="submit" name="save" value="Save">
+    </form>
+
     <?php
     if (isset($_POST['save'])) {
         // set the updated values
@@ -59,6 +63,7 @@
             'examScore' => $_POST['examScore'],
             'courses' => $_POST['courses'],
             'gpa' => $_POST['gpa'],
+            'password' => $_POST['password'],
         );
 
         // update the selected index
