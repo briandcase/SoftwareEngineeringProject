@@ -7,7 +7,7 @@
     $data = json_decode($data);
 
     // delete the row with the index
-    unset($data[$index]);
+    array_splice($data, $index, 1);
 
     // encode back to json
     $data = json_encode($data, JSON_PRETTY_PRINT);
