@@ -11,69 +11,79 @@
 </head>
 
 <body>
-	<p>&nbsp;</p>
-	<div class="row justify-content-center">
-   		<?php
+<p>&nbsp;</p>
+<div class="row justify-content-center">
+<?php
 
-session_start(); /* Starts the session */
-    if (! isset($_SESSION['UserData']['Username'])) {
-        header("location:login.php");
-        exit();
-    }
-    ?>
+/* Starts the session */
+session_start();
+
+if (!isset($_SESSION['UserData']['Username'])) {
+    header("location:login.php");
+    exit;
+}
+
+if (!$_SESSION['UserData']['admin']) {
+    header('Location: student.php');
+    exit;
+}
+
+?>
 
 <div class="container">
   <div class="row">
   <div class="col-2"></div>
   <div class="col-8">
 <a href="add.php">Add</a>
-<table class="table">
-	<thead>
-	  <tr>
-		<th scope="col">ID</th>
-		<th scope="col">Firstname</th>
-		<th scope="col">Lastname</th>
-		<th scope="col">examScore</th>
-		<th scope="col">courses</th>
-		<th scope="col">gpa</th>
-	  </tr>
-	</thead>
-	<tbody>
-		<?php
-			//fetch data from json
-			$data = file_get_contents('members.json');
-			//decode into php array
-			$data = json_decode($data);
- 
-			$index = 0;
-			foreach($data as $row){
-				echo "
-					<tr>
-						<td>".$row->id."</td>
-						<td>".$row->firstname."</td>
-						<td>".$row->lastname."</td>
-						<td>".$row->examScore."</td>
-						<td>".$row->courses."</td>
+<br>
+<table class="table" border="1">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">examScore</th>
+        <th scope="col">courses</th>
+        <th scope="col">gpa</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php
+            //fetch data from json
+            $data = file_get_contents('members.json');
+            //decode into php array
+            $data = json_decode($data);
+
+            $index = 0;
+            foreach($data as $row){
+                echo "
+                    <tr>
+                        <td>".$row->id."</td>
+                        <td>".$row->firstname."</td>
+                        <td>".$row->lastname."</td>
+                        <td>".$row->examScore."</td>
+                        <td>".$row->courses."</td>
                         <td>".$row->gpa."</td>
-						<td><a href='edit.php?index=".$index."'>Edit</a></td>
-						<td><a href='delete.php?index=".$index."'>Delete</a></td>
-					</tr>
-				";
- 
-				$index++;
-			}
-		?>
-	</tbody>
+                        <td><a href='edit.php?index=".$index."'>Edit</a></td>
+                        <td><a href='delete.php?index=".$index."'>Delete</a></td>
+                    </tr>
+                ";
+
+                $index++;
+            }
+        ?>
+    </tbody>
 </table>
 <div class="col-2"></div>
 </div>
 </div>
 </div>
+<br>
 <a href="logout.php">Click here</a> to Logout.
-	</div>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="public/js/jquery-3.3.1.min.js"></script>
-	<script src="public/js/bootstrap.min.js"></script>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="public/js/jquery-3.3.1.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
 </body>
 
 </html>
