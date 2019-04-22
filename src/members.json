@@ -1,0 +1,64 @@
+[
+    {
+        "id": "1",
+        "firstname": "neovic",
+        "lastname": "devierte",
+        "examScore": "80",
+        "courses": "Computer Science",
+        "gpa": "3.5",
+        "password": "password1"
+    },
+    {
+        "id": "2",
+        "firstname": "gemalyn",
+        "lastname": "cepe",
+        "examScore": "90",
+        "courses": "Mathematics",
+        "gpa": "3.9",
+        "password": "password2"
+    },
+    {
+        "id": "3",
+        "firstname": "lee",
+        "lastname": "apilinga",
+        "examScore": "78",
+        "courses": "Biology",
+        "gpa": "3.5",
+        "password": "password3"
+    },
+    {
+        "id": "4",
+        "firstname": "julyn",
+        "lastname": "divinagracia",
+        "examScore": "90",
+        "courses": "Chemistry",
+        "gpa": "3.2",
+        "password": "password4"
+    },
+    {
+        "id": "5",
+        "firstname": "cristine",
+        "lastname": "demapanag",
+        "examScore": "98",
+        "courses": "History",
+        "gpa": "3.0",
+        "password": "password5"
+    },
+    {
+        "id": "6",
+        "firstname": "tintin",
+        "lastname": "devierte",
+        "examScore": "71",
+        "courses": "Physics",
+        "gpa": "3.4",
+    },
+    {
+        "id": "7",
+        "firstname": "some",
+        "lastname": "guy",
+        "examScore": "90",
+        "courses": "geography",
+        "gpa": "4.0",
+        "password": "asdf"
+    }
+]

@@ -5,19 +5,7 @@
 </head>
 
 <div align="center">
-<?php
-
-if (! empty($_POST)) {
-    if (! isset($_SESSION)) {session_start();}
-
-    if (isset($_POST['logout'])) {
-        session_destroy();
-        echo 'Logout successful.<br><br><a href="index.html">Return to login page</a>';
-    }
-} else {
-    header('Location: index.html');
-}
-
+	<?php session_start(); /* Starts the session */session_destroy(); /* Destroy started session */header("location:login.php");  /* Redirect to login page */exit;
 ?>
 </div>
 
