@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Login</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="./public/css/signin.css">
 
