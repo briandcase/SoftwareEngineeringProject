@@ -75,36 +75,25 @@ if(isset($_POST['Submit'])){
 }
 ?>
 <body class="text-center">
-    <div class="container">
-    <div class="row">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+   
+    <h1 class="site-title">Please sign in</h1>
     <form action="" method="post" name="Login_Form">
-
-    <table class="table table-borderless">
     <?php if(isset($msg)){?>
-    <tr>
-      <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
-    </tr>
+      <div><?php echo $msg;?></div>
     <?php } ?>
-    <tr>
-      <td colspan="2" align="left" valign="top"><h3>Login</h3></td>
-    </tr>
-    <tr>
-      <td align="right" valign="top">Username</td>
-      <td><input name="Username" type="text" class="Input"></td>
-    </tr>
-    <tr>
-      <td align="right">Password</td>
-      <td><input name="Password" type="password" class="Input"></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td><input name="Submit" type="submit" value="Login" class="btn btn-lg btn-primary btn-block"></td>
-    </tr>
-  </table>
-</form>
-</div>
-</div>
+        <div class="form-group">
+          <label for="Username">Username</label>
+          <input type="text" class="form-control" name="Username" size="30" autofocus="autofocus" placeholder="Enter ID number here" required/>
+        </div>
+
+        <div>
+          <label for="passwordInput">Password</label>
+          <input type="password" class="form-control" name="password" size="30" placeholder="Enter password here" required/>
+        </div>
+
+        <button class="btn btn-primary btn-large">Sign in</button>
+    </form>
+
 <!-- Latest compiled and minified JavaScript -->
     <script src="public/js/jquery-3.3.1.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
