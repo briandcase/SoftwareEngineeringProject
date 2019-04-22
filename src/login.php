@@ -83,7 +83,7 @@ if(isset($_POST['Submit'])){
     <?php } ?>
         <div class="form-group">
           <label for="Username">Username</label>
-          <input type="text" class="form-control" name="Username" size="30" autofocus="autofocus" placeholder="Enter ID number here" required/>
+          <input type="text" class="form-control" name="Username" size="30" autofocus="autofocus" placeholder="Enter Username here" required/>
         </div>
 
         <div>
