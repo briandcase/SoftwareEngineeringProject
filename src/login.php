@@ -26,72 +26,49 @@
     </style>
     <link rel="stylesheet" href="css/signin.css">
 </head>
-<?php
 
-/* Starts the session */
-session_start();
+<body>
+   <?php session_start(); /* Starts the session */
+/* Check Login form submitted */if(isset($_POST['Submit'])){
+/* Define username and associated password array */$logins = array('Alex' => '123456','username1' => 'password1','username2' => 'password2');
 
-/* Check Login form submitted */
-if(isset($_POST['Submit'])){
+/* Check and assign submitted Username and Password to new variable */$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
+$Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
-    /* Define username and associated password array */
-    $admins = array('Alex' => '123456');
-
-    /* Check and assign submitted Username and Password to new variable */
-    $Username = isset($_POST['Username']) ? $_POST['Username'] : '';
-    $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
-
-    /* Check Username and Password existence in defined array */
-
-    if($Username != '' && $Password != ''){
-
-        $data = json_decode(file_get_contents('members.json'), true);
-
-        /* Admin Login */
-        if (isset($admins[$Username]) && $admins[$Username] == $Password){
-
-            /* Success: Set session variables and redirect to Protected page  */
-            $_SESSION['UserData']['Username']=$Username;
-            $_SESSION['UserData']['admin'] = true;
-            header("location:index.php");
-            exit;
-        }
-
-        /* Checks if user is a student by checking the student database */
-        foreach($data as $row){
-            if($row['id'] == $Username && $row['password'] == $Password){
-                $_SESSION['UserData']['Username']=$Username;
-                $_SESSION['UserData']['admin'] = false;
-                header("location:student.php");
-                exit;
-            }
-        }
-    }
-
-    /*Unsuccessful attempt: Set error message */
-    $msg="<span style='color:red'>Invalid Login Details</span>";
-
+/* Check Username and Password existence in defined array */if (isset($logins[$Username]) && $logins[$Username] == $Password){
+/* Success: Set session variables and redirect to Protected page  */$_SESSION['UserData']['Username']=$logins[$Username];
+header("location:index.php");
+exit;
+} else {
+/*Unsuccessful attempt: Set error message */$msg="<span style='color:red'>Invalid Login Details</span>";
+}
 }
 ?>
-<body>
-   
     <h1 class="site-title">Please sign in</h1>
-    <form action="" method="post" name="Login_Form">
+   <form action="" method="post" name="Login_Form">
+  <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
     <?php if(isset($msg)){?>
-      <div><?php echo $msg;?></div>
+    <tr>
+      <td colspan="2" align="center" valign="top"><?php echo $msg;?></td>
+    </tr>
     <?php } ?>
-        <div class="form-group">
-          <label for="Username">Username</label>
-          <input type="text" class="form-control" name="Username" size="30" autofocus="autofocus" placeholder="Enter Username here" required/>
-        </div>
-
-        <div>
-          <label for="passwordInput">Password</label>
-          <input type="password" class="form-control" name="password" size="30" placeholder="Enter password here" required/>
-        </div>
-
-        <button class="btn btn-primary btn-large">Sign in</button>
-    </form>
+    <tr>
+      <td colspan="2" align="left" valign="top"><h3>Login</h3></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Username</td>
+      <td><input name="Username" type="text" class="Input"></td>
+    </tr>
+    <tr>
+      <td align="right">Password</td>
+      <td><input name="Password" type="password" class="Input"></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+    </tr>
+  </table>
+</form>
 
 <!-- Latest compiled and minified JavaScript -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
