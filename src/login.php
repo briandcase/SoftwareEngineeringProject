@@ -28,23 +28,64 @@
 </head>
 
 <body>
-   <?php session_start(); /* Starts the session */
+   <?php
 /* Check Login form submitted */if(isset($_POST['Submit'])){
 /* Define username and associated password array */$logins = array('Alex' => '123456','username1' => 'password1','username2' => 'password2');
-
+/* Starts the session */
+session_start();
 /* Check and assign submitted Username and Password to new variable */$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
 $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
-
+/* Check Login form submitted */
+if(isset($_POST['Submit'])){
 /* Check Username and Password existence in defined array */if (isset($logins[$Username]) && $logins[$Username] == $Password){
 /* Success: Set session variables and redirect to Protected page  */$_SESSION['UserData']['Username']=$logins[$Username];
+    /* Define username and associated password array */
 header("location:index.php");
+    $admins = array('Alex' => '123456');
 exit;
 } else {
+    /* Check and assign submitted Username and Password to new variable */
 /*Unsuccessful attempt: Set error message */$msg="<span style='color:red'>Invalid Login Details</span>";
+    $Username = isset($_POST['Username']) ? $_POST['Username'] : '';
+}
+    $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
+    /* Check Username and Password existence in defined array */
+    if($Username != '' && $Password != ''){
+        $data = json_decode(file_get_contents('members.json'), true);
+        /* Admin Login */
+        if (isset($admins[$Username]) && $admins[$Username] == $Password){
+            /* Success: Set session variables and redirect to Protected page  */
+            $_SESSION['UserData']['Username']=$Username;
+            $_SESSION['UserData']['admin'] = true;
+            header("location:index.php");
+            exit;
+        }
+        /* Checks if user is a student by checking the student database */
+        foreach($data as $row){
+            if($row['id'] == $Username && $row['password'] == $Password){
+                $_SESSION['UserData']['Username']=$Username;
+                $_SESSION['UserData']['admin'] = false;
+                header("location:student.php");
+                exit;
+            }
+        }
+    }
+    /*Unsuccessful attempt: Set error message */
+    $msg="<span style='color:red'>Invalid Login Details</span>";
 }
 }
 ?>
-    <h1 class="site-title">Please sign in</h1>
+     <div class="container">
+          <div class="row">
+           <div class="col">
+               </div>
+             
+            <div class="col">
+              <h1 class="site-title">Please sign in</h1>
+            </div>
+               
+            <div class="col">
+            </div>
    <form action="" method="post" name="Login_Form">
   <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
     <?php if(isset($msg)){?>
@@ -69,7 +110,7 @@ exit;
     </tr>
   </table>
 </form>
-
+</div>
 <!-- Latest compiled and minified JavaScript -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
