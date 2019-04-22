@@ -6,7 +6,6 @@
     <meta name="description" content="">
     <title>Login</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="./public/css/signin.css">
 
     <style>
       .bd-placeholder-img {
@@ -24,6 +23,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="../public/css/signin.css">
 </head>
 <?php
 
