@@ -72,7 +72,7 @@ if(isset($_POST['Submit'])){
 
 }
 ?>
-<body class="text-center">
+<body>
    
     <h1 class="site-title">Please sign in</h1>
     <form action="" method="post" name="Login_Form">
