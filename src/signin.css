@@ -2,6 +2,11 @@ html,
 body {
   height: 100%;
 }
+table {
+  display: block;
+}
+
+
 
 .form-signin {
   width: 100%;
