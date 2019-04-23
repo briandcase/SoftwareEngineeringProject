@@ -1,11 +1,13 @@
-@import url("bootstrap.min.css");
-
 html,
 body {
   height: 100%;
 }
 
-/*
+body {
+  padding: 0 auto;
+}
+
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -34,22 +36,5 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-} */
+} 
 
-.site-title {
-    text-align: center;
-    margin: 25px 0 0 0;
-}
-
-form {
-   margin: 125 auto 0;
-   width: 30%;
-}
-
-label {
-    margin-bottom: 0;
-}
-
-button {
-    margin-top: 25px;
-}
