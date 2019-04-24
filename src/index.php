@@ -144,8 +144,6 @@ if (!$_SESSION['UserData']['admin']) {
 </div><div class="col-1"></div>
 
 <br/>
-<a href="logout.php">Click here</a> to Logout.
-
 </div>
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/jquery-3.3.1.min.js"></script>
