@@ -33,6 +33,7 @@ if (!$_SESSION['UserData']['admin']) {
   <div class="row">
   <div class="col-1"></div>
   <div class="col-10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Merchants_and_Manufacturers_Building_%28bayou_view%29_Houston.jpg/220px-Merchants_and_Manufacturers_Building_%28bayou_view%29_Houston.jpg" class="img-fluid" alt="Responsive image">
 <h1>Database Manager</h1>
 <a href="add.php">Add</a>
 <a href="logout.php">Click here to Logout.</a>
