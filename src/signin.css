@@ -6,8 +6,9 @@ body {
 h1 {
   width: 100%;
 }
-table {
-  display: block;
+
+form {
+  margin: 0 auto;
 }
 
 
