@@ -2,6 +2,10 @@ html,
 body {
   height: 100%;
 }
+
+h1 {
+  width: 100%;
+}
 table {
   display: block;
 }
