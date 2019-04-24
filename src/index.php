@@ -12,7 +12,6 @@
 </head>
 
 <body>
-<p>&nbsp;</p>
 <div class="row justify-content-center">
 <?php
 
@@ -32,11 +31,11 @@ if (!$_SESSION['UserData']['admin']) {
 ?>
 <div class="container">
   <div class="row">
-  <div class="col-2"></div>
-  <div class="col-8">
+  <div class="col-1"></div>
+  <div class="col-10">
 <h1>Database Manager</h1>
 <a href="add.php">Add</a>
-<br>
+<br/>
 <table class="table" border="1">
     <thead>
         <tr>
@@ -139,13 +138,14 @@ if (!$_SESSION['UserData']['admin']) {
         ?>
     </tbody>
 </table>
-<br>
+</div>
+</div>
+</div><div class="col-1"></div>
+
+<br/>
 <a href="logout.php">Click here</a> to Logout.
-<div class="col-2"></div>
+
 </div>
-</div>
-</div>
-    </div>
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
