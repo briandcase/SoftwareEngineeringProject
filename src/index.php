@@ -35,6 +35,7 @@ if (!$_SESSION['UserData']['admin']) {
   <div class="col-10">
 <h1>Database Manager</h1>
 <a href="add.php">Add</a>
+<a href="logout.php">Click here to Logout.</a>
 <br/>
 <table class="table" border="1">
     <thead>
