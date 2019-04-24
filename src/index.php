@@ -138,12 +138,12 @@ if (!$_SESSION['UserData']['admin']) {
         ?>
     </tbody>
 </table>
+<br>
+<a href="logout.php">Click here</a> to Logout.
 <div class="col-2"></div>
 </div>
 </div>
 </div>
-<br>
-<a href="logout.php">Click here</a> to Logout.
     </div>
     <!-- Latest compiled and minified JavaScript -->
     <script src="public/js/jquery-3.3.1.min.js"></script>
