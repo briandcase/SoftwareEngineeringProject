@@ -140,8 +140,6 @@ foreach($data as $row){
 <h1 align="center">Account does not exist.</h1>
 
 <?php } ?>
-<br>
-<a href="logout.php">Click here</a> to Logout.
 </body>
 
 </html>
