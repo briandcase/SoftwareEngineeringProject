@@ -7,8 +7,8 @@
     <title>Login</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link href="signin.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -104,8 +104,8 @@ if(isset($_POST['Submit'])){
 </div>
 </div>
 <!-- Latest compiled and minified JavaScript -->
-    <script src="public/js/jquery-3.3.1.min.js"></script>
-    <script src="public/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 

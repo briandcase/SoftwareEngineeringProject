@@ -29,7 +29,7 @@ foreach($data as $row){
 ?>
 
 <html>
-<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link href="css/admin.css" rel="stylesheet">
 <head>
     <title>Student</title>

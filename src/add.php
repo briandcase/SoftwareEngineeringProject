@@ -2,6 +2,10 @@
 
     <!DOCTYPE html>
     <html>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+
     <head>
         <meta charset="utf-8">
         <title>Add</title>

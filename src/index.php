@@ -2,7 +2,8 @@
 <head>
 
 <!-- Bootstrap - Latest compiled and minified CSS -->
-<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/admin.css">
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -146,8 +147,8 @@ if (!$_SESSION['UserData']['admin']) {
 </div>
     </div>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="public/js/jquery-3.3.1.min.js"></script>
-    <script src="public/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
